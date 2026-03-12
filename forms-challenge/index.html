@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Forms challenge</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <h1>We want your feedback!</h1>
+
+    <p>We're very excited that you visited the <a href="#">little house in the woods</a>,
+        and we want to hear what you thought of it! Please fill in the below
+        sections.You don't need to provide your name or contact details, but
+        if you do, we'll enter you into a <a href="#">prize draw</a> where you'll have a chance
+        to win prizes.</p>
+    <img src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt="" />    
+    <form>
+        <h2>Facilities</h2>
+        
+            <h3>Was the porridge</h3>
+            <fieldset>
+            <input type="radio" id="hot" name="porridge" value="too hot">
+            <label for="hot">too hot?</label>
+            <input type="radio" id="cold" name="porridge" value="too cold">
+            <label for="cold">too cold?</label>
+            <input type="radio" id="right" name="porridge" value="just right">
+            <label for="right">just right?</label>
+            </fieldset>
+            <h3>Were the beds</h3>
+            <fieldset>
+            <input type="radio" id="hard" name="beds" value="too hard">
+            <label for="hard">too hard?</label>
+            <input type="radio" id="soft" name="beds" value="too soft">
+            <label for="soft">too soft?</label>
+            <input type="radio" id="right" name="beds" value="just right">
+            <label for="right">just right?</label>
+            </fieldset>
+            <h3>Describe the chairs (select all you agree with)</h3>
+            <fieldset>
+            <input type="checkbox" id="comfy" name="chairs" value="comfy">
+            <label for="comfy">Comfy</label>
+            <input type="checkbox" id="luxurious" name="chairs" value="luxurious">
+            <label for="luxurious">Luxurious</label>
+            <input type="checkbox" id="hitec" name="chairs" value="hitec">
+            <label for="hitec">Hi-tech</label>
+            <input type="checkbox" id="pretty" name="chairs" value="pretty">
+            <label for="pretty">Pretty</label>
+            <input type="checkbox" id="majestic" name="chairs" value="majestic">
+            <label for="majestic">Majestic</label>
+            </fieldset>
+
+        <h2>
+            About your hosts
+        </h2>
+        <fieldset>
+            <label for="bears" >Who was your favorite bear?</label>
+            <select name="bears" id="bears">
+                <option value="papa">Papa bear</option>
+                <option value="mama">Mama bear</option>
+                <option value="junior">Junior</option>
+                <option value="dozer">Dozer</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="greeting">Which greeting did you prefer?</label>
+            <select name="greeting" id="greeting">
+                <option value="wave">Wave</option>
+                <option value="friendly">Friendly greeting</option>
+                <option value="growl">Growl</option>
+                <option value="claw">Claw marks in the door</option>
+            </select>
+        </fieldset>
+
+        <h2>
+            Any other feedback?
+        </h2>
+        <fieldset>
+            <label for="feedback">Give us your comments</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Your comments here..."></textarea>
+        </fieldset>
+        <h2>
+            Your details
+        </h2>
+        <fieldset>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+        </fieldset>
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+        </fieldset>
+        <fieldset>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+        </fieldset>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
