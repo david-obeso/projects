@@ -83,7 +83,7 @@
             guessField.focus();
         }
 
-        guessSubmit.addEventListener("click", checkGuess);
+        
 
         let randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -96,6 +96,8 @@
 
         let guessCount = 1;
         let resetButton;
+        
+        guessSubmit.addEventListener("click", checkGuess);
     </script>
 </body>
 
