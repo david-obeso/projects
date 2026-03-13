@@ -3,14 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Test</title>
+    <title>Scoreboard</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        h1 {
+            text-align: center;
+            font-size: 300%;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 200%;
+             ;
+            
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 100%;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
-    <button>
-        Player 1: Chris
-    </button>
-    
+    <h1>Scoreboard</h1>
+    <table>
+        <tr>
+            <th>Team1</th>
+            <th>Team2</th>
+        </tr>
+        <tr>
+            <td id="scoreboard1">0</td>
+            <td id="scoreboard2">0</td>
+        </tr>
+        <tr>
+            <td><button id="add1">+1</button></td>
+            <td><button id="add2">+1</button></td>
+        </tr>
+    </table>
+
+    <script>
+        score1 = 0;
+        score2 = 0;
+        document.getElementById("add1").addEventListener("click", score1++);
+        document.getElementById("add2").addEventListener("click", score2++);
+        document.getElementById("scoreboard1").innerText = score1;
+        document.getElementById("scoreboard2").innerText = score2;
+    </script>
 </body>
 
 </html>
