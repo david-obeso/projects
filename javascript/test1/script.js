@@ -14,8 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
         // 4. Give EACH button a click listener
         button.addEventListener('click', function () {
 
-            // 5. Add the text of the clicked button to the paragraph
-            outputParagraph.textContent += button.textContent;
+            // 5. Delete, clear or add the text of the clicked button to the paragraph
+            if (button.id === 'delete') {
+                outputParagraph.textContent = outputParagraph.textContent.slice(0, -1);
+            } else if (button.id === 'clear') {
+                outputParagraph.textContent = '';
+            } else {
+                outputParagraph.textContent += button.textContent;
+            }
 
         });
     });
