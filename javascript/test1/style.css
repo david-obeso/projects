@@ -5,11 +5,3 @@ button {
     color: white;
     border: 1px solid black;
 }
-
-button#delete {
-    background-color: red;
-}
-
-button#clear {
-    background-color: blue;
-}
