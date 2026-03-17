@@ -1,0 +1,64 @@
+body {
+    /* Centers everything nicely on the page */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+h2.dark-mode {
+    color: white;
+}
+
+h2.light-mode {
+    color: black;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    background-color: #4CAF50;
+    /* A softer, modern green */
+    color: white;
+    border: none;
+    /* Removes the harsh black outline */
+    border-radius: 8px;
+    /* Rounds the corners! */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Changes your mouse arrow to a pointing hand */
+    margin: 5px;
+    /* Adds a little breathing room between the buttons */
+    transition: 0.2s;
+    /* Makes the hover effect below feel smooth */
+}
+
+button.small-btn {
+    height: 30px;
+    font-size: 14px;
+    background-color: #023604;
+
+}
+
+footer {
+    margin-top: 40px;
+    text-align: left;
+}
+
+/* This is a "pseudo-class". It only applies when your mouse is OVER the button */
+button:hover {
+    background-color: #3e8e41;
+    /* Changes to a slightly darker green */
+    transform: scale(1.05);
+    /* Makes the button grow just a tiny bit! */
+}
