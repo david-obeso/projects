@@ -4,6 +4,14 @@ body {
     margin-top: 50px;
 }
 
+body.win {
+    background-color: green;
+}
+
+body.lose {
+    background-color: red;
+}
+
 input {
     padding: 10px;
     font-size: 16px;
