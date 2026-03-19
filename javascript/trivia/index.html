@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            docucument.querySelectorAll('button[name="q1"]').forEach(button => {
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('button[name="q1"]').forEach(button => {
                 button.addEventListener('click', () => {
                     if (button.id === 'q1a') {
-                        alert('Correct!');
+                        button.className = 'correct';
+                        document.getElementById('q1Feedback').textContent = 'Correct!';
+                        document.querySelectorAll('button[name="q1"]').forEach(button => {
+                            button.disabled = true;
+                        });
                     } else {
-                        alert('Incorrect. Try again!');
+                        button.className = 'incorrect';
+                        document.getElementById('q1Feedback').textContent = 'Incorrect!';
+                        document.querySelectorAll('button[name="q1"]').forEach(button => {
+                            button.disabled = true;
+                        });
                     }
                 });
             });
-        </script>
-    </head>
-    <body>
-        <div class="header">
-            <h1>Trivia!</h1>
+            document.getElementById('submit').addEventListener('click', () => {
+                const answer = document.getElementById('q2').value.trim().toLowerCase();
+                if (answer === 'jupiter') {
+                    document.getElementById('q2Feedback').textContent = 'Correct!';
+                    document.getElementById('q2').style.backgroundColor = 'green';
+                } else {
+                    document.getElementById('q2Feedback').textContent = 'Incorrect!';
+                    document.getElementById('q2').style.backgroundColor = 'red';
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <!-- TODO: Add multiple choice question here -->
+            <h3>Question 1: What is the capital of France?</h3>
+            <p id="q1Feedback"></p>
+            <p>
+                <button id="q1a" name="q1">Paris</button>
+                <button id="q1b" name="q1">London</button>
+                <button id="q1c" name="q1">Rome</button>
+                <button id="q1d" name="q1">Berlin</button>
+            </p>
         </div>
 
-        <div class="container">
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-                <!-- TODO: Add multiple choice question here -->
-                 <h3>Question 1: What is the capital of France?</h3>
-                 <p>
-                    <button id="q1a" name="q1">Paris</button>
-                    <button id="q1b" name="q1">London</button>
-                    <button id="q1c" name="q1">Rome</button> 
-                    <button id="q1d" name="q1">Berlin</button>
-                 </p>
-            </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <!-- TODO: Add free response question here -->
-                 <h3>Question 1: What is the largest planet in our solar system?</h3>
-                 <p>
-                    <input type="text" id="q2" name="q2">
-                 </p>
-                 <button id="submit">Submit</button>
-            </div>
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <!-- TODO: Add free response question here -->
+            <h3>Question 1: What is the largest planet in our solar system?</h3>
+            <p id="q2Feedback"></p>
+            <p>
+                <input type="text" id="q2" name="q2">
+            </p>
+            <button id="submit">Submit</button>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
