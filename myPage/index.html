@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLΛRIS main page</title>
+    <title>SOLØRIS main page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
-        <h1>SOLΛRIS</h1>
+        <h1>SOLØRIS</h1>
     </header>
+    <img src="/images/SOLARIS.jpg" alt="Profile image of SOLØRIS">
     <div class="layout">
         <main>
-            <h2><b>Fandom Name:</b> Solstice</h2>
-            <h2><b>Greeting:</b> "Light up the dark! Hello, we are SOLΛRIS!"</h2>
-            <h2><b>About SOLΛRIS</b></h2>
+            <h2><b>About SOLØRIS</b></h2>
             <p>
                 Born from the intersection of high-fashion elegance and futuristic "glitch" aesthetics,
-                SOLΛRIS is a four-member powerhouse redefining the boundaries of the "girl crush" genre.
-                The group’s name represents their role as a central sun in the music industry—a source of
+                SOLØRIS is a four-member powerhouse redefining the boundaries of the "girl crush" genre.
+                The group's name represents their role as a central sun in the music industry—a source of
                 heat, light, and gravity that pulls listeners into their unique cinematic universe.
-                Rather than sticking to one sound, SOLΛRIS focuses on "Ethereal-Pop," a blend of heavy
+                Rather than sticking to one sound, SOLØRIS focuses on "Ethereal-Pop," a blend of heavy
                 synth-bass, haunting melodies, and intricate rap verses that feel both alien and familiar.
             </p>
             <p>
@@ -34,7 +35,7 @@
                 about power—it's about the brilliance you leave behind.
             </p>
             <p>
-                Since their viral pre-debut "Lunar Sessions," SOLΛRIS has built a reputation for high-concept
+                Since their viral pre-debut "Lunar Sessions," SOLØRIS has built a reputation for high-concept
                 storytelling. Their narrative follows four travelers from a fading dimension who must use the
                 power of sound to reignite the stars. This "lore" is woven into every music video and stage outfit,
                 utilizing reflective fabrics, holographic visuals, and avant-garde choreography that mimics the
@@ -42,13 +43,18 @@
             </p>
             <p>
                 They aren't just a girl group; they are a multi-sensory experience
-                designed to break the mold. With their debut single, "Event Horizon," SOLΛRIS invites fans
+                designed to break the mold. With their debut single, "Event Horizon," SOLØRIS invites fans
                 (known affectionately as Solstice) to step out of the shadows and into the light.
                 The group champions themes of self-actualization and defying expectations, encouraging their audience to
                 find their own "inner sun."
                 As they prepare to take the global stage, one thing is certain: the world is about to get a lot
                 brighter.
             </p>
+            <h3><b>Fandom Name:</b> <span id="fandom">Solstice</span></h3>
+
+            <button id="greetingBtn">Greeting:</button>
+            <span id="greeting" class="hidden">
+                "Light up the dark! Hello, we are SOLØRIS!"</span>
         </main>
         <nav class="sidebar">
             <h2>Site navigation</h2>
@@ -58,6 +64,7 @@
                 <li><a href="page2.html">Discography</a></li>
                 <li><a href="page3.html">Multimedia</a></li>
             </ul>
+            <button id="darkModeBtn">Light mode</button>
         </nav>
     </div>
 </body>
