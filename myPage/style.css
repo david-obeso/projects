@@ -1,0 +1,27 @@
+.layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    /* space between content and sidebar */
+}
+
+/* Main content takes most of the width */
+main {
+    flex: 1;
+}
+
+/* Sidebar stays narrow on the right */
+.sidebar {
+    width: 220px;
+    /* adjust as needed */
+    border-left: 2px solid #ddd;
+    padding-left: 1rem;
+}
+
+/*style disabled link */
+a.disabled {
+    pointer-events: none;
+    color: gray;
+    opacity: 0.6;
+    cursor: default;
+}
