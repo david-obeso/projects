@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOLØRIS main page</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -14,64 +15,69 @@
     <header>
         <h1>SOLØRIS</h1>
     </header>
-    <img src="/images/SOLARIS.jpg" alt="Profile image of SOLØRIS">
-    <div class="layout">
-        <main>
-            <h2><b>About SOLØRIS</b></h2>
-            <p>
-                Born from the intersection of high-fashion elegance and futuristic "glitch" aesthetics,
-                SOLØRIS is a four-member powerhouse redefining the boundaries of the "girl crush" genre.
-                The group's name represents their role as a central sun in the music industry—a source of
-                heat, light, and gravity that pulls listeners into their unique cinematic universe.
-                Rather than sticking to one sound, SOLØRIS focuses on "Ethereal-Pop," a blend of heavy
-                synth-bass, haunting melodies, and intricate rap verses that feel both alien and familiar.
-            </p>
-            <p>
-                The lineup consists of four distinct "elements" that complete the solar system:
-                Mina (the visionary leader), Sora (the powerhouse main vocal), Jia (the experimental main dancer),
-                and Rumi (the sharp-tongued maknae). Each member represents a different phase of light,
-                from the blinding "Supernova" energy of their stage performances to the "Eclipse" mystery
-                of their conceptual storytelling. Together, they aim to prove that strength isn't just
-                about power—it's about the brilliance you leave behind.
-            </p>
-            <p>
-                Since their viral pre-debut "Lunar Sessions," SOLØRIS has built a reputation for high-concept
-                storytelling. Their narrative follows four travelers from a fading dimension who must use the
-                power of sound to reignite the stars. This "lore" is woven into every music video and stage outfit,
-                utilizing reflective fabrics, holographic visuals, and avant-garde choreography that mimics the
-                movement of celestial bodies.
-            </p>
-            <p>
-                They aren't just a girl group; they are a multi-sensory experience
-                designed to break the mold. With their debut single, "Event Horizon," SOLØRIS invites fans
-                (known affectionately as Solstice) to step out of the shadows and into the light.
-                The group champions themes of self-actualization and defying expectations, encouraging their audience to
-                find their own "inner sun."
-                As they prepare to take the global stage, one thing is certain: the world is about to get a lot
-                brighter.
-            </p>
-            <h3><b>Fandom Name:</b> <span id="fandom">Solstice</span></h3>
+    <img src="/images/SOLARIS.jpg" alt="Profile image of SOLØRIS" class="img-fluid rounded">
+    <div class="container mt-4">
+        <div class="row">
+            <main class="col-md-9">
+                <h2><b>About SOLØRIS</b></h2>
+                <p>
+                    Born from the intersection of high-fashion elegance and futuristic "glitch" aesthetics,
+                    SOLØRIS is a four-member powerhouse redefining the boundaries of the "girl crush" genre.
+                    The group's name represents their role as a central sun in the music industry—a source of
+                    heat, light, and gravity that pulls listeners into their unique cinematic universe.
+                    Rather than sticking to one sound, SOLØRIS focuses on "Ethereal-Pop," a blend of heavy
+                    synth-bass, haunting melodies, and intricate rap verses that feel both alien and familiar.
+                </p>
+                <p>
+                    The lineup consists of four distinct "elements" that complete the solar system:
+                    Mina (the visionary leader), Sora (the powerhouse main vocal), Jia (the experimental main dancer),
+                    and Rumi (the sharp-tongued maknae). Each member represents a different phase of light,
+                    from the blinding "Supernova" energy of their stage performances to the "Eclipse" mystery
+                    of their conceptual storytelling. Together, they aim to prove that strength isn't just
+                    about power—it's about the brilliance you leave behind.
+                </p>
+                <p>
+                    Since their viral pre-debut "Lunar Sessions," SOLØRIS has built a reputation for high-concept
+                    storytelling. Their narrative follows four travelers from a fading dimension who must use the
+                    power of sound to reignite the stars. This "lore" is woven into every music video and stage outfit,
+                    utilizing reflective fabrics, holographic visuals, and avant-garde choreography that mimics the
+                    movement of celestial bodies.
+                </p>
+                <p>
+                    They aren't just a girl group; they are a multi-sensory experience
+                    designed to break the mold. With their debut single, "Event Horizon," SOLØRIS invites fans
+                    (known affectionately as Solstice) to step out of the shadows and into the light.
+                    The group champions themes of self-actualization and defying expectations, encouraging their
+                    audience to
+                    find their own "inner sun."
+                    As they prepare to take the global stage, one thing is certain: the world is about to get a lot
+                    brighter.
+                </p>
+                <h3><b>Fandom Name:</b> <span id="fandom">Solstice</span></h3>
 
-            <button id="greetingBtn">Greeting:</button>
-            <span id="greeting" class="hidden">
-                "Light up the dark! Hello, we are SOLØRIS!"</span>
-        </main>
-        <nav class="sidebar">
-            <h2>Site navigation</h2>
-            <ul>
-                <li><a class="disabled" href="index.html">Index</a></li>
-                <li><a href="page1.html">Members</a></li>
-                <li><a href="page2.html">Discography</a></li>
-                <li><a href="page3.html">Multimedia</a></li>
-            </ul>
-            <button id="darkModeBtn">Light mode</button>
-        </nav>
+                <button id="greetingBtn" class="btn btn-primary">Greeting:</button>
+                <span id="greeting" class="hidden">
+                    "Light up the dark! Hello, we are SOLØRIS!"</span>
+            </main>
+
+            <nav class="sidebar col-md-3">
+                <h2>Site navigation</h2>
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item"><a class="nav-link     active" href="index.html">Index</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page1.html">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page2.html">Discography</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page3.html">Multimedia</a></li>
+                </ul>
+                <button id="darkModeBtn" class="btn btn-outline-light">Light mode</button>
+            </nav>
+        </div>
     </div>
+    <footer>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@kpopcams.com">support@kpopcams.com</a></p>
+        <p>Copyright &copy; Kpopcams. All rights reserved.</p>
+    </footer>
 </body>
-<footer>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:support@kpopcams.com">support@kpopcams.com</a></p>
-    <p>Copyright &copy; Kpopcams. All rights reserved.</p>
-</footer>
+
 
 </html>
